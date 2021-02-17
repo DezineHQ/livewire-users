@@ -1,0 +1,54 @@
+{
+    "name": "tashariwebdev/livewire-users",
+    "description": "User + Roles",
+    "keywords": [
+        "tashariwebdev",
+        "livewire-users"
+    ],
+    "homepage": "https://github.com/tashariwebdev/livewire-users",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ridwan Guman",
+            "email": "ridwan@tashari.co.za",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TashariWebDev\\LivewireUsers\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TashariWebDev\\LivewireUsers\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TashariWebDev\\LivewireUsers\\LivewireUsersServiceProvider"
+            ],
+            "aliases": {
+                "LivewireUsers": "TashariWebDev\\LivewireUsers\\LivewireUsersFacade"
+            }
+        }
+    }
+}
